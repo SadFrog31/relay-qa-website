@@ -12,7 +12,6 @@ type BookingCalendarProps = {
 
 const weekdays = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"];
 const timeSlots = ["09:00", "11:30", "14:00", "16:30"];
-const budgetRanges = ["Not sure yet", "$2k–5k", "$5k–10k", "$10k–20k", "$20k+"];
 
 const monthFormatter = new Intl.DateTimeFormat("en-US", {
   month: "long",
@@ -116,7 +115,6 @@ function BookingPlanner() {
     const name = String(form.get("name") || "").trim();
     const email = String(form.get("email") || "").trim();
     const challenge = String(form.get("challenge") || "").trim();
-    const budget = String(form.get("budget") || budgetRanges[0]);
 
     const subject = `QA consultation request — ${dateFormatter.format(selectedDate)}`;
     const body = [
@@ -124,7 +122,6 @@ function BookingPlanner() {
       `Email: ${email}`,
       `Requested slot: ${dateFormatter.format(selectedDate)} at ${selectedTime}`,
       `Timezone: ${timezone}`,
-      `Engagement range: ${budget}`,
       "",
       "QA challenge:",
       challenge,
@@ -241,11 +238,6 @@ function BookingPlanner() {
 
           <label className="mt-5 block font-mono text-[10px] uppercase tracking-[0.1em] text-muted" htmlFor="booking-challenge">What should we help you automate?</label>
           <textarea id="booking-challenge" name="challenge" required rows={4} placeholder="Regression QA, API coverage, release confidence…" className="mt-2 w-full resize-y border border-line bg-white p-4 text-sm leading-6 outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/15" />
-
-          <label className="mt-5 block font-mono text-[10px] uppercase tracking-[0.1em] text-muted" htmlFor="booking-budget">Engagement range</label>
-          <select id="booking-budget" name="budget" className="mt-2 min-h-12 w-full border border-line bg-white px-4 text-sm outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/15">
-            {budgetRanges.map((budget) => <option key={budget}>{budget}</option>)}
-          </select>
 
           <button type="submit" className="mt-6 inline-flex min-h-12 w-full items-center justify-center gap-2 border border-accent bg-accent px-5 font-medium text-white transition-colors hover:border-accent-hover hover:bg-accent-hover focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
             <Mail aria-hidden="true" size={16} /> Confirm booking
