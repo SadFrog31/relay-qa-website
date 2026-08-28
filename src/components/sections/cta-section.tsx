@@ -17,7 +17,7 @@ export function CTASection({
           <p className="mt-7 max-w-2xl text-lg leading-8 text-white/65">{description}</p>
         </div>
         <div className="flex items-end border-t border-white/15 p-5 md:p-10 lg:border-l lg:border-t-0 lg:p-16">
-          <ButtonLink href="/book" className="w-full border-white bg-white text-ink hover:border-accent hover:bg-accent hover:text-white">
+          <ButtonLink href="/book" variant="inverse" className="w-full">
             Book a 30-minute call
           </ButtonLink>
         </div>

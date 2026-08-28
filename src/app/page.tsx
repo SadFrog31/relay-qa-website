@@ -6,7 +6,6 @@ import { TeamCard } from "@/components/cards/team-card";
 import { CTASection } from "@/components/sections/cta-section";
 import { ButtonLink } from "@/components/ui/button-link";
 import { Container, Section, SectionHeader } from "@/components/ui/primitives";
-import { AutomationGraph } from "@/components/visuals/automation-graph";
 import { processStages } from "@/content/process";
 import { projects } from "@/content/projects";
 import { services } from "@/content/services";
@@ -22,14 +21,14 @@ const capabilities = [
 export default function Home() {
   return (
     <main id="main-content" className="flex-1">
-      <Container className="grid lg:grid-cols-2">
-        <section className="flex min-h-[560px] flex-col justify-between border-b border-line p-5 md:p-10 lg:min-h-[650px] lg:border-b-0 lg:border-r">
+      <Container>
+        <section className="flex min-h-[560px] flex-col justify-between border-b border-line p-5 md:p-10 lg:min-h-[650px]">
           <p className="eyebrow flex items-center gap-2">
             <span className="h-1.5 w-1.5 bg-accent" />
             AUTOMATED QUALITY / CONTINUOUS DELIVERY
           </p>
           <div className="py-16 lg:py-8">
-            <h1 className="max-w-[760px] text-hero font-medium leading-[0.96] tracking-[-0.055em]">Testing infrastructure built to ship.</h1>
+            <h1 className="max-w-[1050px] text-hero font-medium leading-[0.96] tracking-[-0.055em]">Testing infrastructure built to ship.</h1>
             <p className="mt-8 max-w-xl text-lg leading-8 text-muted md:text-xl">We design and build automated testing systems that help engineering teams release reliable software faster.</p>
             <div className="mt-10 flex flex-col gap-3 min-[420px]:flex-row">
               <TrackLink href="/book" event="book_call_clicked" properties={{ location: "homepage_hero" }} className="inline-flex min-h-12 items-center justify-center border border-accent bg-accent px-5 font-medium text-white transition-colors hover:bg-accent-hover focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">Book a call</TrackLink>
@@ -41,7 +40,6 @@ export default function Home() {
             <span>RELEASE / READY</span>
           </div>
         </section>
-        <AutomationGraph />
       </Container>
 
       <Container>
