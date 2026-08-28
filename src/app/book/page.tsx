@@ -15,7 +15,7 @@ export default function BookPage() {
   return (
     <main id="main-content">
       <Container>
-        <section className="grid border-b border-line lg:grid-cols-[0.8fr_1.2fr]">
+        <section className="grid border-b border-line lg:grid-cols-[0.65fr_1.35fr]">
           <div className="border-b border-line p-5 md:p-10 lg:border-b-0 lg:border-r lg:p-14">
             <Eyebrow>BOOK / 30 MINUTES</Eyebrow>
             <h1 className="mt-14 text-hero font-medium leading-[0.98] tracking-[-0.055em]">Let&apos;s talk about your testing infrastructure.</h1>
@@ -24,7 +24,7 @@ export default function BookPage() {
             <h2 className="mt-10 font-medium">We&apos;ll discuss</h2>
             <ul className="mt-5 space-y-3">{agenda.map((item) => <li key={item} className="flex items-center gap-3 text-muted"><Check aria-hidden="true" className="text-accent" size={15} />{item}</li>)}</ul>
           </div>
-          <div className="bg-panel p-5 md:p-10 lg:p-14"><BookingCalendar provider="calcom" /></div>
+          <div className="bg-panel p-5 md:p-8 lg:p-10"><BookingCalendar provider="calcom" /></div>
         </section>
       </Container>
     </main>
