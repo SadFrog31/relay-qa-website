@@ -1,6 +1,6 @@
 export const siteConfig = {
-  name: "Relay QA",
-  shortName: "R/QA",
+  name: "A-team",
+  shortName: "A-team",
   description: "Automated testing systems designed around your release process.",
   email: process.env.NEXT_PUBLIC_COMPANY_EMAIL || "hello@example.com",
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",

@@ -1,4 +1,4 @@
-# Relay QA agency website
+# A-team agency website
 
 A production-oriented, responsive B2B website for a QA automation agency. The current brand, team, case studies, contact details, and legal information are centralized demonstration placeholders and must be replaced before launch.
 
@@ -81,11 +81,11 @@ The current brief requires exactly five services, three projects, four team memb
 
 ## Booking configuration
 
-Set `NEXT_PUBLIC_CALCOM_URL` to a full public event URL such as `https://cal.com/team/event`. The `/book` route renders the Cal.com element inline. When the value is absent or invalid, the component keeps its layout and displays an email fallback.
+Set `NEXT_PUBLIC_CALCOM_URL` to a full public event URL such as `https://cal.com/team/event`. The `/book` route renders the Cal.com element inline. When the value is absent or invalid, the component displays the interactive email-based booking planner.
 
 ## Testing and CI
 
-Unit tests cover collection integrity, analytics behavior, booking fallback, navigation, mobile menu state, and data-driven cards. Playwright covers route navigation, CTAs, generated case studies, the mobile menu, booking fallback, and axe scans of representative pages. GitHub Actions runs install, lint, typecheck, unit tests, build, Chromium installation, and browser tests.
+Unit tests cover collection integrity, analytics behavior, the booking planner, navigation, mobile menu state, and data-driven cards. Playwright covers route navigation, CTAs, generated case studies, the mobile menu, booking, and axe scans of representative pages. GitHub Actions runs install, lint, typecheck, unit tests, build, Chromium installation, and browser tests.
 
 ## Deployment
 
